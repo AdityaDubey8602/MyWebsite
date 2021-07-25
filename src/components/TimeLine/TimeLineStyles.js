@@ -1,4 +1,3 @@
-
 import styled from 'styled-components'
 
 export const CarouselContainer = styled.ul`
@@ -9,20 +8,16 @@ export const CarouselContainer = styled.ul`
   display: flex;
   justify-content: space-between; 
   /* overflow-x: hidden; */
-
   margin-left: 32px;
   &:first-of-type{
     margin-left: 0px;
   }
-
   margin-bottom: 80px;
-
   //remove scrollbar
   scrollbar-width: none;  
    &::-webkit-scrollbar {
      display: none;
    }
-
   @media ${props => props.theme.breakpoints.sm} {
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
@@ -43,7 +38,6 @@ export const CarouselItem = styled.div`
   background: #0F1624;
   border-radius: 3px;
   max-width: 196px;
-
   @media ${props => props.theme.breakpoints.md} {
     max-width: 124px;
   }
@@ -75,7 +69,6 @@ export const CarouselItemTitle = styled.h4`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 8px;
-
   @media ${props => props.theme.breakpoints.md} {
     font-size: 20px;
     line-height: 28px;
@@ -91,7 +84,6 @@ export const CarouselItemImg = styled.svg`
   margin-left: 21px;
   -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
   width: 100%;
-
   @media ${props => props.theme.breakpoints.sm} {
     -webkit-mask-image: none;
     margin-left: 16px;
@@ -105,7 +97,6 @@ export const CarouselItemText = styled.p`
   letter-spacing: 0.02em;
   color: rgba(255, 255, 255, 0.75);
   padding-right: 16px;
-
   @media ${props => props.theme.breakpoints.md} {
     font-size: 12px;
     line-height: 18px;
@@ -119,10 +110,8 @@ export const CarouselItemText = styled.p`
 `
 export const CarouselButtons = styled.div`
   width: 288px;
-
   display: none;
   visibility: hidden;
-
   @media ${props => props.theme.breakpoints.sm} {
     display: flex;
     visibility: visible;
@@ -139,7 +128,6 @@ export const CarouselButton = styled.button`
   margin-right: 4px;
   opacity: ${(props) => props.active === props.index ? `1` : `.33`};
   transform: ${(props) => props.active === props.index ? `scale(1.6)` : `scale(1)`};
-
   &:focus {
     outline: none;
   }

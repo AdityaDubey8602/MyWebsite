@@ -1,19 +1,45 @@
 import React from 'react';
 
 import { Section, SectionDivider, SectionTitle } from '../../styles/GlobalComponents';
-import { Box, Boxes, BoxNum, BoxText } from './AcomplishmentsStyles';
+import { Box, Boxes, BoxNum, BoxSubTitle, BoxText } from './AcomplishmentsStyles';
 
 const data = [
-  { number: 20, text: 'Open Source Projects'},
-  { number: 1000, text: 'Students', },
-  { number: 1900, text: 'Github Followers', },
-  { number: 5000, text: 'Github Stars', }
+  { number: 10, text: 'Open Source Projects' },
+  { number: 500, text: 'Linkedin Connections', },
+];
+
+const diffData = [
+  { number: "Two", text: "Development Internships" }
+];
+
+const anotherData = [
+  { title: "Ecell Member", text: "Got first position in One Dollor Venture." }
 ];
 
 const Acomplishments = () => (
-  <div>
-    Acomplishments
-  </div>
+  <Section>
+    <SectionTitle>Personal Acomplishments</SectionTitle>
+    <Boxes>
+      {data.map((card, index) => (
+        <Box key={index}>
+          <BoxNum>{card.number}+</BoxNum>
+          <BoxText>{card.text}</BoxText>
+        </Box>
+      ))}
+      {diffData.map((card, index) => (
+        <Box key={index}>
+          <BoxNum>{card.number}</BoxNum>
+          <BoxText>{card.text}</BoxText>
+        </Box>
+      ))}
+      {anotherData.map((card, index) => (
+        <Box key={index}>
+          <BoxSubTitle>{card.title}</BoxSubTitle>
+          <BoxText>{card.text}</BoxText>
+        </Box>
+      ))}
+    </Boxes>
+  </Section>
 );
 
 export default Acomplishments;
