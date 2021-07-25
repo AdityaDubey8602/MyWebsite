@@ -4,8 +4,8 @@ export const projects = [
     description: "Using React.js I have created this updated portfolio. All you need to know about me is here.",
     image: '/images/1.png',
     tags: ['React', 'Javascript'],
-    source: 'https://google.com',
-    visit: 'https://google.com',
+    source: 'https://github.com/AdityaDubey8602/MyWebsite',
+    visit: '',
     id: 0,
   },
   {
